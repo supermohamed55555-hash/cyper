@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Shield | شبتر 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    <div id="xp-container"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>CONTENTS</h2>
+        <ul class="nav-menu">
+            <li class="nav-item"><button class="nav-btn active" onclick="showSection('overview')">Overview</button></li>
+            <li class="nav-item"><button class="nav-btn" onclick="showSection('ch1')">Ch 1: Introduction to
+                    Computers</button></li>
+            <li class="nav-item"><button class="nav-btn" onclick="showSection('quiz')">Access Quiz</button></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-wrapper">
+
+        <!-- Overview Section -->
+        <section id="overview" class="chapter-section active">
+            <div class="header-hero">
+                <h1>Cyber Shield: The Visual Bilingual Guide</h1>
+                <p class="tagline">Cybersecurity from Zero to Hero</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dash-card" onclick="showSection('ch1')">
+                    <span class="number">01</span>
+                    <h3>Introduction to Computers</h3>
+                    <p>Fundamentals, Hardware, Software, components and History.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 1 Section -->
+        <section id="ch1" class="chapter-section">
+            <div class="main-content-header">
+                <h2
+                    style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-white); text-shadow: 0 0 15px var(--accent-blue);">
+                    Chapter 1: The Digital Core</h2>
+                <p style="color: var(--text-gray); font-size: 1.2rem; margin-bottom: 3rem;">A comprehensive journey
+                    through Computer History, Architecture, and Networks.</p>
+            </div>
+
+            <!-- 1. The Fundamental Machine -->
+            <div class="content-block">
+                <div class="svg-container">
+                    <svg class="svg-illus" viewBox="0 0 24 24">
+                        <path
+                            d="M4,6H18V10H20V6A2,2 0 0,0 18,4H4A2,2 0 0,0 2,6V16A2,2 0 0,0 4,18H9V16H4V6M21,11H13A1,1 0 0,0 12,12V19A1,1 0 0,0 13,20H21A1,1 0 0,0 22,19V12A1,1 0 0,0 21,11M20,18H14V13H20V18Z" />
+                    </svg>
+                </div>
+                <div class="english-block">
+                    <p><span class="highlight-blue">Computer Definition:</span> An electronic device that accepts <span
+                            class="highlight-yellow">Raw Data</span> via input components, processes it through the CPU,
+                        and generates <span class="highlight-blue">Meaningful Information</span> as output for efficient
+                        use.</p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>الكمبيوتر مش مجرد شاشة وكيبورد.. ده "منظومة معالجة". بياخد الـ <span class="highlight-yellow">Raw
+                            Data</span> (دي بيانات خام ملهاش معنى لوحدها، زي أرقام عشوائية) ويفرمهما في الـ CPU عشان في
+                        الآخر يديك <span class="highlight-blue">Information</span> (معلومة مفيدة، زي تقرير أرباح أو صورة
+                        فيديو).</p>
+                </div>
+            </div>
+
+            <!-- 2. Software Deep Dive -->
+            <h3 style="font-size: 2.2rem; margin: 4rem 0 2rem; color: var(--accent-yellow);">I. Software Components (The
+                Spirit)</h3>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p>Software is the set of instructions that tells the hardware what to do. It includes:</p>
+                    <ul style="margin: 1rem 2rem; color: var(--text-gray);">
+                        <li><span class="highlight-blue">Firmware:</span> Low-level software embedded in hardware chips.
+                        </li>
+                        <li><span class="highlight-blue">Operating System (OS):</span> The main manager (Windows, macOS,
+                            Linux).</li>
+                        <li><span class="highlight-blue">Device Drivers:</span> Software that lets hardware communicate
+                            with the OS.</li>
+                        <li><span class="highlight-blue">Application Software:</span> Programs for user tasks (Browsers,
+                            Office, Games).</li>
+                    </ul>
+                </div>
+                <div class="arabic-explanation">
+                    <p>السوفت وير هو "الروح" اللي بتحرك الحديد. في المحاضرة قسمناه لـ 4 أنواع:
+                        <br>1️⃣ الـ <span class="highlight-blue">Firmware</span>: ده سوفت وير بسيط بيبقى "محفور" جوه
+                        القطع نفسها عشان يشغلها.
+                        <br>2️⃣ الـ <span class="highlight-blue">OS</span>: ده الريس الكبير اللي بيدير كل حاجة في
+                        الجهاز.
+                        <br>3️⃣ الـ <span class="highlight-blue">Drivers</span>: دي "المترجم" اللي بيخلي الويندوز يفهم
+                        لغة كارت الشاشة أو الطابعة.
+                        <br>4️⃣ الـ <span class="highlight-blue">Apps</span>: دي البرامج اللي بنستخدمها كل يوم (كروم،
+                        فيسبوك، وورد).
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. Hardware Deep Dive -->
+            <h3 style="font-size: 2.2rem; margin: 4rem 0 2rem; color: var(--accent-blue);">II. Hardware Components (The
+                Body)</h3>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p><span class="highlight-blue">CPU (The Processor):</span> Consists of the <span
+                            class="highlight-yellow">ALU</span> (performs arithmetic and logical operations) and the
+                        <span class="highlight-yellow">CU</span> (directs traffic and coordinates events).
+                    </p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>المعالج أو الـ CPU هو "العقل المدبر". جواه جزئين مهمين: الـ <span
+                            class="highlight-yellow">ALU</span> دي "الآلة الحاسبة" اللي بتعمل كل العمليات (+, -, logic)،
+                        والـ <span class="highlight-yellow">CU</span> ده "عسكري المرور" اللي بينظم الأوامر طالعة وداخلة
+                        منين.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p><span class="highlight-blue">Data Storage Units:</span> Includes <span
+                            class="highlight-yellow">RAM</span> (Memory for running tasks, wiped when powered off) and
+                        <span class="highlight-yellow">Secondary Storage</span> (Hard drives, SSDs for permanent data).
+                    </p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>التخزين نوعين: <span class="highlight-yellow">RAM</span> دي الذاكرة "اللي مش بتشيل جميل"، يعني
+                        بمجرد ما الكهرباء تفصل كل اللي عليها بيطير. الـ <span class="highlight-yellow">Hard Drive</span>
+                        ده المخزن الدائم لصورك وفيديوهاتك.</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p><span class="highlight-blue">I/O Units:</span> Input devices (Keyboard, Mouse, Mic, Scanner) and
+                        Output devices (Monitor, Printer, Speaker).</p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>أجهزة الإدخال (Input) يعني بندخل داتا لجوه الجهاز. وأجهزة الإخراج (Output) يعني بنشوف أو نسمع
+                        النتيجة بره الجهاز.</p>
+                </div>
+            </div>
+
+            <!-- 4. Generations Evolution -->
+            <h3 style="font-size: 2.2rem; margin: 4rem 0 2rem; color: var(--accent-yellow);">III. Evolution: Computer
+                Generations</h3>
+
+            <table
+                style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; color: var(--text-gray); border: 1px solid var(--border-color);">
+                <tr style="background: rgba(59, 130, 246, 0.1); color: #fff;">
+                    <th style="padding: 1rem; border: 1px solid var(--border-color);">Generation</th>
+                    <th style="padding: 1rem; border: 1px solid var(--border-color);">Core Tech</th>
+                    <th style="padding: 1rem; border: 1px solid var(--border-color);">Key Facts</th>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color); color: var(--accent-blue);">1st
+                        (40-56)</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">Vacuum Tubes</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">ENIAC Machine. Huge & Hot.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color); color: var(--accent-blue);">2nd
+                        (56-63)</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">Transistors</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">Smaller & Faster. More reliable.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color); color: var(--accent-blue);">3rd
+                        (64-71)</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">Integrated Circuits</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">ICs/Silicon Chips era.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color); color: var(--accent-blue);">4th
+                        (71-Now)</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">VLSI Microprocessors</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">The age of PCs and Smartphones.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color); color: var(--accent-blue);">5th
+                        (Future)</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">AI & Bio-chips</td>
+                    <td style="padding: 1rem; border: 1px solid var(--border-color);">Quantum and Parallel Processing.
+                    </td>
+                </tr>
+            </table>
+
+            <!-- 5. Networks & Protocols -->
+            <h3 style="font-size: 2.2rem; margin: 4rem 0 2rem; color: var(--accent-blue);">IV. Networking & Security
+                Architecture</h3>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p><span class="highlight-blue">Computer Network:</span> A collection of interconnected devices
+                        sharing resources. Components include <span class="highlight-yellow">Hosts</span> (end devices),
+                        <span class="highlight-yellow">Hubs/Switches</span> (LAN connects), <span
+                            class="highlight-yellow">Routers</span> (WAN connects), and <span
+                            class="highlight-yellow">Firewalls</span> (Security filtering).
+                    </p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>الشبكة هي "مجتمع الديجيتال". الأجهزة بتتواصل مع بعضها.
+                        <br>🔹 الـ <span class="highlight-yellow">Host</span>: ده أي جهاز واصل بالشبكة (زي لابتوبك).
+                        <br>🔹 الـ <span class="highlight-yellow">Switch</span>: ده المشترك اللي بيوصل الأجهزة جوه
+                        المكان الواحد.
+                        <br>🔹 الـ <span class="highlight-yellow">Router</span>: الموجه اللي بيربط شبكتك بالإنترنت
+                        العالمي.
+                        <br>🔹 الـ <span class="highlight-yellow">Firewall</span>: حارس الأمن اللي بيمنع الـ Hackers
+                        يدخلوا شبكتك.
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p><span class="highlight-blue">Coverage Classification:</span>
+                        <br>• <span class="highlight-yellow">PAN:</span> Personal area (Bluetooth range).
+                        <br>• <span class="highlight-yellow">LAN:</span> Local area (Building/Home).
+                        <br>• <span class="highlight-yellow">MAN:</span> Metropolitan (City-wide).
+                        <br>• <span class="highlight-yellow">WAN:</span> Wide area (Global/Internet).
+                    </p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>بنشخص الشبكات حسب مساحتها:
+                        بتبدأ من الـ <span class="highlight-yellow">PAN</span> (زي سماعة البلوتوث بموبايلك)، لحد الـ
+                        <span class="highlight-yellow">WAN</span> (اللي هي "أبو الشبكات" الإنترنت اللي رابط العالم كله).
+                    </p>
+                </div>
+            </div>
+
+            <!-- 6. Internet & Services -->
+            <h3 style="font-size: 2.2rem; margin: 4rem 0 2rem; color: var(--accent-yellow);">V. The Global Internet & IP
+                Anatomy</h3>
+
+            <div class="content-block">
+                <div class="english-block">
+                    <p>The Internet identifies nodes using <span class="highlight-blue">IP Addresses</span>.
+                        Communication is governed by the <span class="highlight-yellow">TCP/IP Protocol Suite</span>.
+                    </p>
+                    <p style="margin-top: 10px;">Services include: <span class="highlight-blue">e-Banking</span>, <span
+                            class="highlight-blue">e-Commerce</span>, and <span class="highlight-blue">Remote
+                            Healthcare</span>.</p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>الإنترنت ماشي بنظام "العناوين". أي جهاز لازم يكون ليه <span class="highlight-blue">IP
+                            Address</span> (زي بصمة الصباع). والقوانين اللي بتحكم النقل هي <span
+                            class="highlight-yellow">TCP/IP</span>. بفضل الكلام ده بقى عندنا خدمات زي البنوك أونلاين
+                        والكشف الطبي عن بعد (Remote Healthcare).</p>
+                </div>
+            </div>
+
+            <!-- 7. Scientific Future -->
+            <div class="content-block" style="border-top: 2px solid var(--accent-blue); padding-top: 2rem;">
+                <div class="english-block">
+                    <p><span class="highlight-blue">Future Machines & Nanotechnology:</span> Engineering at the atomic
+                        scale allows for biological computing and hyper-efficient materials.</p>
+                </div>
+                <div class="arabic-explanation">
+                    <p>إحنا داخلين على عصر الـ <span class="highlight-blue">Nanotechnology</span>. دي هندسة "الذرات"،
+                        يعني هنقدر نبني أجهزة أصغر من أصغر خلك في جسم الإنسان، وبسرعات خرافية!</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="quiz" class="chapter-section">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>Access Check</h2>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="quiz-progress"></div>
+                    </div>
+                    <p id="progress-text">Progress: 0%</p>
+                </div>
+                <div id="quiz-content"></div>
+                <div id="quiz-result"></div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
