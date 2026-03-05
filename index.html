@@ -12,8 +12,15 @@
     <canvas id="matrixCanvas"></canvas>
     <div id="xp-container"></div>
 
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <h2>CONTENTS</h2>
         <ul class="nav-menu">
             <li class="nav-item"><button class="nav-btn active" onclick="showSection('overview')">Overview</button></li>
