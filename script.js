@@ -38,6 +38,11 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+// Mobile Sidebar Toggle
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+}
 
 // Section Switching
 function showSection(sectionId) {
@@ -69,6 +74,12 @@ function showSection(sectionId) {
     // Special handling for quiz
     if (sectionId === 'quiz') {
         loadQuiz();
+    }
+
+    // Close sidebar on mobile after clicking
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) {
+        sidebar.classList.remove('open');
     }
 }
 
