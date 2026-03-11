@@ -27,12 +27,16 @@
         <button class="close-sidebar" onclick="toggleSidebar()">&times;</button>
         <h2>CONTENTS</h2>
         <ul class="nav-menu">
-            <li class="nav-item"><button class="nav-btn active" onclick="showSection('overview')">Overview</button></li>
-            <li class="nav-item"><button class="nav-btn" onclick="showSection('ch1')">Ch 1: Introduction to
-                    Computers</button></li>
-            <li class="nav-item"><button class="nav-btn" onclick="showSection('ch2')">Ch 2: Introduction to
-                    Encryption</button></li>
-            <li class="nav-item"><button class="nav-btn" onclick="showSection('quiz')">Access Quiz</button></li>
+            <li class="nav-item"><button class="nav-btn active" onclick="showSection('overview')">Home /
+                    الرئيسية</button></li>
+            <li class="nav-item"><button class="nav-btn" onclick="showSection('ch1')">Ch 1: Digital Core /
+                    أساسيات</button></li>
+            <li class="nav-item"><button class="nav-btn" onclick="showSection('ch2')">Ch 2: Encryption /
+                    التشفير</button></li>
+            <li class="nav-item"><button class="nav-btn" onclick="showSection('resources')">Resources / المصادر</button>
+            </li>
+            <li class="nav-item"><button class="nav-btn" onclick="showSection('quiz')">Access Quiz / الاختبار</button>
+            </li>
         </ul>
     </aside>
 
@@ -42,20 +46,32 @@
         <!-- Overview Section -->
         <section id="overview" class="chapter-section active">
             <div class="header-hero">
-                <h1>Cyber Shield: The Visual Bilingual Guide</h1>
-                <p class="tagline">Cybersecurity from Zero to Hero</p>
+                <span
+                    style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem; display: block; letter-spacing: 2px;">BILINGUAL
+                    CYBER EDUCATION</span>
+                <h1>Cyber Shield:<br>From Zero to Hero</h1>
+                <p class="tagline">Explore the Digital Frontier in English & Arabic</p>
+                <button class="hero-btn" onclick="showSection('ch1')">Start Learning / ابدأ الآن</button>
             </div>
 
             <div class="dashboard-grid">
                 <div class="dash-card" onclick="showSection('ch1')">
+                    <span class="progress-badge completed">Completed ✔</span>
                     <span class="number">01</span>
-                    <h3>Introduction to Computers</h3>
-                    <p>Fundamentals, Hardware, Software, components and History.</p>
+                    <h3>The Digital Core</h3>
+                    <p>Fundamentals, Hardware, Software & Evolution.</p>
                 </div>
                 <div class="dash-card" onclick="showSection('ch2')">
+                    <span class="progress-badge completed">In Progress ⚡</span>
                     <span class="number">02</span>
-                    <h3>Introduction to Encryption</h3>
-                    <p>Learn about Cryptography basics: Caesar Cipher and Columnar Transposition.</p>
+                    <h3>The Art of Secrecy</h3>
+                    <p>Encryption basics, Caesar & Columnar techniques.</p>
+                </div>
+                <div class="dash-card locked" style="opacity: 0.6; cursor: not-allowed;">
+                    <span class="progress-badge locked">Locked 🔒</span>
+                    <span class="number">03</span>
+                    <h3>Network Defense</h3>
+                    <p>Coming Soon...</p>
                 </div>
             </div>
         </section>
@@ -140,6 +156,17 @@
                             class="highlight-yellow">ALU</span> دي "الآلة الحاسبة" اللي بتعمل كل العمليات (+, -, logic)،
                         والـ <span class="highlight-yellow">CU</span> ده "عسكري المرور" اللي بينظم الأوامر طالعة وداخلة
                         منين.</p>
+                </div>
+            </div>
+
+            <!-- Video Section Example -->
+            <div class="content-block" style="background: rgba(59, 130, 246, 0.05);">
+                <div class="english-block">
+                    <h3 style="color: var(--accent-blue); margin-bottom: 1rem;">Video Lesson: Computer Basics</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/tpIctyqH29Q" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -594,7 +621,7 @@
         <section id="quiz" class="chapter-section">
             <div class="quiz-container">
                 <div class="quiz-header">
-                    <h2>Access Check</h2>
+                    <h2>Mission Check / اختبر معلوماتك</h2>
                     <div class="progress-container">
                         <div class="progress-bar" id="quiz-progress"></div>
                     </div>
@@ -605,7 +632,49 @@
             </div>
         </section>
 
+        <!-- Resources Section -->
+        <section id="resources" class="chapter-section">
+            <div class="main-content-header">
+                <h2 style="font-size: 3rem; color: var(--accent-yellow);">Learning Vault</h2>
+                <p style="color: var(--text-gray);">Essential Tools, Cheat Sheets, and Reference Materials.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dash-card">
+                    <h3>Encryption Cheat Sheet</h3>
+                    <p>Caesar & Columnar Transposition quick reference PDF.</p>
+                    <button class="nav-btn"
+                        style="background: var(--accent-blue); color: white; margin-top: 1rem;">Download</button>
+                </div>
+                <div class="dash-card">
+                    <h3>Cyber Tools</h3>
+                    <p>Collection of free tools for learning packet sniffing & crypto.</p>
+                    <button class="nav-btn" style="background: var(--accent-blue); color: white; margin-top: 1rem;">View
+                        List</button>
+                </div>
+                <div class="dash-card">
+                    <h3>Practice Lab</h3>
+                    <p>Interactive scenarios to test your defense skills.</p>
+                    <button class="nav-btn" style="background: var(--accent-blue); color: white; margin-top: 1rem;">Open
+                        Lab</button>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <h4>Cyber Shield | The Bilingual Guide</h4>
+            <div class="social-links">
+                <a href="https://github.com/supermohamed55555-hash" target="_blank">GitHub</a>
+                <a href="#" target="_blank">YouTube</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+            <p class="copyright">Developed with Matrix Vibes by <span style="color: var(--accent-blue);">Mohamed
+                    Ahmed</span> &copy; 2025</p>
+        </div>
+    </footer>
 
 
     <script src="script.js"></script>

@@ -66,12 +66,13 @@ function showSection(sectionId) {
     }
 
     // Set active button in sidebar
-    const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(btn => {
-        return btn.getAttribute('onclick').includes(`'${sectionId}'`);
+    const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach(btn => {
+        const onclickAttr = btn.getAttribute('onclick');
+        if (onclickAttr && onclickAttr.includes(`'${sectionId}'`)) {
+            btn.classList.add('active');
+        }
     });
-    if (activeBtn) {
-        activeBtn.classList.add('active');
-    }
 
     // Special handling for quiz
     if (sectionId === 'quiz') {
